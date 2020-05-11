@@ -15,7 +15,7 @@ if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['emai
 
 
 //check if the account already exists
-if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
+if ($stmt = $con->prepare('SELECT ID, password FROM accounts WHERE UserName = ?')) {
 	$stmt->bind_param('s', $_POST['username']);
 	$stmt->execute();
 	$stmt->store_result();
@@ -25,7 +25,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 		echo 'Username exists, please choose another!';
 	} else {
         // Insert a new account
-        if($stmt = $con->prepare('INSERT INTO accounts (username,password,email) VALUES (?,?,?)')){
+        if($stmt = $con->prepare('INSERT INTO accounts (UserName,Password,Email) VALUES (?,?,?)')){
             // hash password for security
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
             $stmt->bind_param('sss', $_POST['username'],$password,$_POST['email']);
