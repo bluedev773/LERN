@@ -1,0 +1,81 @@
+/* menu */
+
+/* ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(190, 211, 255);
+  }
+  
+  li {
+    display:inline-block;
+  }
+  
+  li a {
+    display:block;
+    color: white;
+    background-color: rgb(96, 122, 155);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  /* li a:hover {
+    background-color: rgb(40, 84, 141);
+  } */ 
+  /* .active {
+    background-color: rgb(221, 131, 29);
+  } */
+html body {
+    margin:0;
+    padding:0;
+}
+.topnav {
+    display:inline-block;
+    background-color: rgb(190, 211, 255);
+    overflow: hidden;
+    vertical-align: bottom;
+    width:100%;
+    padding:14px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    background-color: rgb(96, 122, 155);
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: rgb(40, 84, 141);
+    color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: rgb(221, 131, 29);
+    color: white;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+    float: right;
+    padding-right:14px;
+}
+
+
+
+
+
+.logo {
+      background-color: transparent !important; 
+      padding-left:10px !important;
+  }
+
+  
