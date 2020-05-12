@@ -24,15 +24,14 @@ include("config.php");
                 <img src="images/logo.png" alt="LERN!" height = '100' width = '100' >
             </a>
             <a class="active button" href="index.html">Home</a>
-            <a class="button" href="profile.html">Profile</a>
             <div class="topnav-right">
-              <a class="button" href="register.html">Register</a>
-              <a class="button" href="login.html">Login</a>
+              <a class="button" href="profile.html">Profile</a>
+              <a class="button" href="logout.php">Logout</a>
             </div>
           </div>
 
             <div class = "content">
-                <p>Welcome, $UserName </p>
+                <p>Welcome, <?php echo $_SESSION['name']; ?> .</p>
             </div>
     </body>
 </html>
