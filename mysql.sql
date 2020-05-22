@@ -19,3 +19,12 @@ CREATE TABLE IF NOT EXISTS Course (
     CourseDescription VARCHAR(255) NOT NULL,
     PRIMARY KEY (CourseID),
 );
+
+
+CREATE TABLE IF NOT EXISTS Assignment (
+    AssignmentID INT NOT NULL,
+    CourseID INT NOT NULL,
+    CourseDescription VARCHAR(255) NOT NULL,
+    PRIMARY KEY (AssignmentID),
+    FOREIGN KEY (CourseID) REFERENCES course(CourseID)
+);

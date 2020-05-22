@@ -1,0 +1,12 @@
+<Assignments>
+    <Assignment>
+        <AssignmentID>1</AssignmentID>
+        <CourseID>1</CourseID>
+        <AssignmentDescription>Create a simple HTML page that prints "Hello World".</AssignmentDescription>
+    </Assignment>
+    <Assignment>
+        <AssignmentID>2</AssignmentID>
+        <CourseID>1</CourseID>
+        <AssignmentDescription>Add some nice CSS styling to the page created in Assignment 1.</AssignmentDescription>
+    </Assignment>
+</Assignments>
