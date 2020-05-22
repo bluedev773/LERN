@@ -9,6 +9,8 @@ if (!isset($_SESSION['loggedin'])) {
 
 //connect to database
 include("config.php");
+include("CourseDataInsert.php");
+
 ?>
 
 <html>
