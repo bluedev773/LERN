@@ -1,0 +1,12 @@
+<Quizes>
+    <Quiz>
+        <QuizID>1</QuizID>
+        <UnitID>1</UnitID>
+        <QuizName>HTML QUIZ</QuizName>
+    </Quiz>
+    <Quiz>
+        <QuizID>2</QuizID>
+        <UnitID>2</UnitID>
+        <QuizName>CSS QUIZ</QuizName>
+    </Quiz>
+</Quizes>

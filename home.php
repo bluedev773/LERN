@@ -13,6 +13,7 @@ include("CourseDataInsert.php");
 include("AssignmentDataInsert.php");
 include("UnitDataInput.php");
 include("LessonDataInput.php");
+include("QuizDataInput.php");
 
 ?>
 
