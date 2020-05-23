@@ -57,3 +57,11 @@ CREATE TABLE IF NOT EXISTS Quiz (
     PRIMARY KEY (QuizID),
     FOREIGN KEY (UnitID) REFERENCES unit(UnitID)
 );
+
+CREATE TABLE IF NOT EXISTS Question (
+    QuestionID INT NOT NULL,
+    QuizID INT NOT NULL,
+    QuestionText VARCHAR(255) NOT NULL,
+    PRIMARY KEY (QuestionID),
+    FOREIGN KEY (QuizID) REFERENCES quiz(QuizID)
+);

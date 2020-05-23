@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Questions>
+    //quiz 1
+    <Question>
+        <QuestionID>1</QuestionID>
+        <QuizID>1</QuizID>
+        <QuestionText>Question1 text</QuestionText>
+    </Question>
+    <Question>
+        <QuestionID>2</QuestionID>
+        <QuizID>1</QuizID>
+        <QuestionText>Question2 text</QuestionText>
+    </Question>
+    <Question>
+        <QuestionID>3</QuestionID>
+        <QuizID>1</QuizID>
+        <QuestionText>Question3 text</QuestionText>
+    </Question>
+
+    //quiz 2
+    <Question>
+        <QuestionID>4</QuestionID>
+        <QuizID>2</QuizID>
+        <QuestionText>Question4 text</QuestionText>
+    </Question>
+    <Question>
+        <QuestionID>5</QuestionID>
+        <QuizID>2</QuizID>
+        <QuestionText>Question5 text</QuestionText>
+    </Question>
+    <Question>
+        <QuestionID>6</QuestionID>
+        <QuizID>2</QuizID>
+        <QuestionText>Question6 text</QuestionText>
+    </Question>
+</Questions>
