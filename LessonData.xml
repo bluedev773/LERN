@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Lessons>
+    <Lesson>
+        <LessonID>1</LessonID>
+        <UnitID>1</UnitID>
+        <LessonName>Starting out with HTML</LessonName>
+        <Introduction>In this first unit in the Web Dev course we will take a look at HTML. </Introduction>
+        <Objective> The objective is to learn how pages are structured using HTML and to create a basic Web Page using common HTML tags. </Objective>
+        <KeyTerm>HTML, tags, head, body, tables, forms</KeyTerm>
+        <Reading> Read Chapter 2, Introduction to HTML5: Part 1, of the e-text. Do the exercises for Chapter 2.</Reading>
+    </Lesson>
+    <Lesson>
+        <LessonID>2</LessonID>
+        <UnitID>2</UnitID>
+        <LessonName>The basics of CSS</LessonName>
+        <Introduction>This unit will be an  introduction to CSS. </Introduction>
+        <Objective>The objective is to alter the appearance of a website using cascading style sheets. </Objective>
+        <KeyTerm>CSS, inline style, external style sheet </KeyTerm>
+        <Reading>Read Chapter 4, Introduction to Cascading Style SheetsTM (CSS): Part 1, of the e-text. Do the chapter 4 exercises. </Reading>
+    </Lesson>
+
+</Lessons>

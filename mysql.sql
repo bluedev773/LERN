@@ -37,3 +37,15 @@ CREATE TABLE IF NOT EXISTS Unit (
     PRIMARY KEY (UnitID),
     FOREIGN KEY (CourseID) REFERENCES course(CourseID)
 );
+
+CREATE TABLE IF NOT EXISTS Lesson (
+    LessonID INT NOT NULL,
+    UnitID INT NOT NULL,
+    LessonName VARCHAR(50) NOT NULL,
+    Introduction VARCHAR(255),
+    Objective VARCHAR(255),
+    KeyTerm VARCHAR(255),
+    Reading VARCHAR(255),
+    PRIMARY KEY (LessonID),
+    FOREIGN KEY (UnitID) REFERENCES unit(UnitID)
+);
