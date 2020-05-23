@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS accounts (
     PRIMARY KEY (ID)
 );
 
---create tables to hold xml information
+--create tables to hold xml file information
 
 CREATE TABLE IF NOT EXISTS Course (
     CourseID INT NOT NULL,
@@ -24,7 +24,16 @@ CREATE TABLE IF NOT EXISTS Course (
 CREATE TABLE IF NOT EXISTS Assignment (
     AssignmentID INT NOT NULL,
     CourseID INT NOT NULL,
-    CourseDescription VARCHAR(255) NOT NULL,
+    AssignmentDescription VARCHAR(255) NOT NULL,
     PRIMARY KEY (AssignmentID),
+    FOREIGN KEY (CourseID) REFERENCES course(CourseID)
+);
+
+CREATE TABLE IF NOT EXISTS Unit (
+    UnitID INT NOT NULL,
+    CourseID INT NOT NULL,
+    UnitName VARCHAR(50) NOT NULL,
+    UnitDescription VARCHAR(255),
+    PRIMARY KEY (UnitID),
     FOREIGN KEY (CourseID) REFERENCES course(CourseID)
 );

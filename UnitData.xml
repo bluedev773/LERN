@@ -1,0 +1,16 @@
+<Units>
+    <Unit>
+        <UnitID>1</UnitID>
+        <CourseID>1</CourseID>
+        <UnitName>HTML</UnitName>
+        <UnitDescription> Intro to HTML </UnitDescription>
+    </Unit>
+
+    <Unit>
+        <UnitID>2</UnitID>
+        <CourseID>1</CourseID>
+        <UnitName>CSS</UnitName>
+        <UnitDescription>Intro to CSS</UnitDescription>
+    </Unit>
+
+</Units>
