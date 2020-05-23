@@ -2,7 +2,7 @@
 <Courses>
     <Course>
         <CourseID>1</CourseID>
-        <CourseName> HTML Basics </CourseName>
-        <CourseDescription> Learn HTML! </CourseDescription>
+        <CourseName> Web Dev basics </CourseName>
+        <CourseDescription> Learn to create simple web pages using HTML and CSS! </CourseDescription>
     </Course>
 </Courses>
