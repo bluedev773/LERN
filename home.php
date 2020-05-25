@@ -8,14 +8,14 @@ if (!isset($_SESSION['loggedin'])) {
 }
 
 //connect to database
-include("config.php");
-include("CourseDataInsert.php");
-include("AssignmentDataInsert.php");
-include("UnitDataInput.php");
-include("LessonDataInput.php");
-include("QuizDataInput.php");
-include("QuestionDataInput.php");
-include("AnswerDataInput.php");
+include("data/config.php");
+include("data/CourseDataInsert.php");
+include("data/AssignmentDataInsert.php");
+include("data/UnitDataInput.php");
+include("data/LessonDataInput.php");
+include("data/QuizDataInput.php");
+include("data/QuestionDataInput.php");
+include("data/AnswerDataInput.php");
 
 ?>
 
