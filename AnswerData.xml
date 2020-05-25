@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Answers>
+    <Answer>
+        <AnswerID>1</AnswerID>
+        <QuestionID>1</QuestionID>
+        <AnswerText>Answer1 text1</AnswerText>
+        <AnswerText>Answer1 text2</AnswerText>
+        <AnswerText>Answer1 text3</AnswerText>
+        <AnswerText>Answer1 text4</AnswerText>
+        <AnswerCorrect>Answer1 text2 </AnswerCorrect>
+    </Answer>
+    <Answer>
+        <AnswerID>2</AnswerID>
+        <QuestionID>2</QuestionID>
+        <AnswerText>Answer2 text1</AnswerText>
+        <AnswerText>Answer2 text2</AnswerText>
+        <AnswerText>Answer2 text3</AnswerText>
+        <AnswerText>Answer2 text4</AnswerText>
+        <AnswerCorrect>Answer2 text3 </AnswerCorrect>
+    </Answer>
+    <Answer>
+        <AnswerID>3</AnswerID>
+        <QuestionID>3</QuestionID>
+        <AnswerText>Answer3 text1</AnswerText>
+        <AnswerText>Answer3 text2</AnswerText>
+        <AnswerText>Answer3 text3</AnswerText>
+        <AnswerText>Answer3 text4</AnswerText>
+        <AnswerCorrect>Answer3 text1 </AnswerCorrect>
+    </Answer>
+
+    <Answer>
+        <AnswerID>4</AnswerID>
+        <QuestionID>4</QuestionID>
+        <AnswerText>Answer4 text1</AnswerText>
+        <AnswerText>Answer4 text2</AnswerText>
+        <AnswerText>Answer4 text3</AnswerText>
+        <AnswerText>Answer4 text4</AnswerText>
+        <AnswerCorrect>Answer4 text1 </AnswerCorrect>
+    </Answer>
+    <Answer>
+        <AnswerID>5</AnswerID>
+        <QuestionID>5</QuestionID>
+        <AnswerText>Answer5 text1</AnswerText>
+        <AnswerText>Answer5 text2</AnswerText>
+        <AnswerText>Answer5 text3</AnswerText>
+        <AnswerText>Answer5 text4</AnswerText>
+        <AnswerCorrect>Answer5 text4 </AnswerCorrect>
+    </Answer>
+    <Answer>
+        <AnswerID>6</AnswerID>
+        <QuestionID>6</QuestionID>
+        <AnswerText>Answer6 text1</AnswerText>
+        <AnswerText>Answer6 text2</AnswerText>
+        <AnswerText>Answer6 text3</AnswerText>
+        <AnswerText>Answer6 text4</AnswerText>
+        <AnswerCorrect>Answer6 text3 </AnswerCorrect>
+    </Answer>
+</Answers>

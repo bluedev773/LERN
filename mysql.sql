@@ -65,3 +65,12 @@ CREATE TABLE IF NOT EXISTS Question (
     PRIMARY KEY (QuestionID),
     FOREIGN KEY (QuizID) REFERENCES quiz(QuizID)
 );
+
+CREATE TABLE IF NOT EXISTS Answer (
+    AnswerID INT NOT NULL,
+    QuestionID INT NOT NULL,
+    AnswerText VARCHAR(50) NOT NULL,
+    AnswerCorrect VARCHAR(50) NOT NULL,
+    PRIMARY KEY (AnswerID),
+    FOREIGN KEY (QuestionID) REFERENCES Question(QuestionID)
+)

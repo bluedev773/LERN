@@ -1,6 +1,5 @@
 
 <?php
-    // include(config.php);
  //load xml file to database
     $affectedRow = 0;
     $xml = simplexml_load_file("CourseData.xml") or die("Error: Cannot create object");
