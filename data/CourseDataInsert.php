@@ -2,7 +2,7 @@
 <?php
  //load xml file to database
     $affectedRow = 0;
-    $xml = simplexml_load_file("CourseData.xml") or die("Error: Cannot create object");
+    $xml = simplexml_load_file("data/CourseData.xml") or die("Error: Cannot create object");
 
     foreach ($xml->children() as $row) {
         $CourseID = $row->CourseID;

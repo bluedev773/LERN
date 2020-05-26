@@ -8,7 +8,8 @@ if (!isset($_SESSION['loggedin'])) {
 }
 
 //connect to database
-include("data/config.php");
+include("config.php");
+
 include("data/CourseDataInsert.php");
 include("data/AssignmentDataInsert.php");
 include("data/UnitDataInput.php");
@@ -23,20 +24,23 @@ include("data/AnswerDataInput.php");
     <head>
         <meta charset="utf-8">
         <title>LERN</title>
-        <link rel="stylesheet" href="styles/style.css" type="text/css">
+        <link rel="stylesheet" href="../styles/style.css" type="text/css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
     </head>
 
     <body> 
-        <div class="topnav">
-            <a href ="index.html" class="logo">
-                <img src="images/logo.png" alt="LERN!" height = '100' width = '100' >
-            </a>
-            <a class="active button" href="index.html">Home</a>
-            <div class="topnav-right">
-              <a class="button" href="profile.html">Profile</a>
-              <a class="button" href="logout.php">Logout</a>
+        <nav class="navtop">
+            <div>
+                <a href ="index.html" class="logo">
+                    <img src="images/logo.png" alt="LERN!" height = '70' width = '70' >
+                </a>
+                <h1 id = "title">LERN</h1>
+                <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
+				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
             </div>
-          </div>
+            <hr>
+        </nav>
 
             <div class = "content">
                 <p>Welcome, <?php echo $_SESSION['name']; ?> .</p>
