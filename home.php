@@ -32,7 +32,7 @@ include("data/AnswerDataInput.php");
     <body> 
         <nav class="navtop">
             <div>
-                <a href ="index.html" class="logo">
+                <a href ="home.php" class="logo">
                     <img src="images/logo.png" alt="LERN!" height = '70' width = '70' >
                 </a>
                 <h1 id = "title">LERN</h1>
