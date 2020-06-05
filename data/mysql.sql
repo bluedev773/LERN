@@ -1,5 +1,5 @@
 -- create database
-CREATE DATABASE [IF NOT EXISTS] tma2_part2;
+CREATE DATABASE IF NOT EXISTS tma2_part2;
 
 -- create accounts table to facilitate login
 
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS Course (
     CourseID INT NOT NULL,
     CourseName VARCHAR(50) NOT NULL,
     CourseDescription VARCHAR(255) NOT NULL,
-    PRIMARY KEY (CourseID),
+    PRIMARY KEY (CourseID)
 );
 
 
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS Assignment (
     CourseID INT NOT NULL,
     AssignmentDescription VARCHAR(255) NOT NULL,
     PRIMARY KEY (AssignmentID),
-    FOREIGN KEY (CourseID) REFERENCES course(CourseID)
+    FOREIGN KEY (CourseID) REFERENCES Course(CourseID)
 );
 
 CREATE TABLE IF NOT EXISTS Unit (
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS Unit (
     UnitName VARCHAR(50) NOT NULL,
     UnitDescription VARCHAR(255),
     PRIMARY KEY (UnitID),
-    FOREIGN KEY (CourseID) REFERENCES course(CourseID)
+    FOREIGN KEY (CourseID) REFERENCES Course(CourseID)
 );
 
 CREATE TABLE IF NOT EXISTS Lesson (
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS Lesson (
     KeyTerm VARCHAR(255),
     Reading VARCHAR(255),
     PRIMARY KEY (LessonID),
-    FOREIGN KEY (UnitID) REFERENCES unit(UnitID)
+    FOREIGN KEY (UnitID) REFERENCES Unit(UnitID)
 );
 
 CREATE TABLE IF NOT EXISTS Quiz (
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS Quiz (
     UnitID INT NOT NULL,
     QuizName VARCHAR(50) NOT NULL,
     PRIMARY KEY (QuizID),
-    FOREIGN KEY (UnitID) REFERENCES unit(UnitID)
+    FOREIGN KEY (UnitID) REFERENCES Unit(UnitID)
 );
 
 CREATE TABLE IF NOT EXISTS Question (
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS Question (
     QuizID INT NOT NULL,
     QuestionText VARCHAR(255) NOT NULL,
     PRIMARY KEY (QuestionID),
-    FOREIGN KEY (QuizID) REFERENCES quiz(QuizID)
+    FOREIGN KEY (QuizID) REFERENCES Quiz(QuizID)
 );
 
 CREATE TABLE IF NOT EXISTS Answer (
