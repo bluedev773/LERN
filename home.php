@@ -43,8 +43,21 @@ include("data/AnswerDataInput.php");
         </nav>
 
             <div class = "content">
-                <p>Welcome, <?php echo $_SESSION['name']; ?> .</p>
-                <p> <?php include ("data/CourseDataParse.php"); ?> </p>
+                <h3>Welcome, <?php echo $_SESSION['name']; ?> .</h3>
+                <h2>My Courses</h2>
+                <div class = "wrapper" style= padding:0>
+                    <?php 
+                    // 
+                    $sql = "SELECT CourseName FROM course";
+                    $result = mysqli_query($con, $sql);
+                    while($row = $result->fetch_assoc()){
+                        echo '<div class = "box" onclick="" style = "border-style: groove;">'.
+                                                '<h3>'.$row["CourseName"].'</h3>'.
+                                                '</div>';
+                    };
+				
+			 ?> 
+                </div>
             </div>
     </body>
 </html>
