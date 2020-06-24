@@ -44,6 +44,7 @@ include("data/AnswerDataInput.php");
 
             <div class = "content">
                 <p>Welcome, <?php echo $_SESSION['name']; ?> .</p>
+                <p> <?php include ("data/CourseDataParse.php"); ?> </p>
             </div>
     </body>
 </html>
