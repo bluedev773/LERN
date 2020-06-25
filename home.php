@@ -1,3 +1,5 @@
+
+
 <?php
 
 session_start();
@@ -26,7 +28,26 @@ include("data/AnswerDataInput.php");
         <title>LERN</title>
         <link rel="stylesheet" href="../styles/style.css" type="text/css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+        <script>
+            function myFunction(id){
 
+                 $.ajax({
+                     url: 'data/CourseDataParse.php',
+                     type: "POST",
+                     data: {id:id},
+                    success: function(data){
+                        alert("success");
+                        $('#courseContent').html(data);
+                    },
+                    error: function(jqXHR, textStatus, errorThrown){
+
+                        alert('Error Loading');
+                    }
+                });
+            }
+             
+        </script>
     </head>
 
     <body> 
@@ -45,19 +66,30 @@ include("data/AnswerDataInput.php");
             <div class = "content">
                 <h3>Welcome, <?php echo $_SESSION['name']; ?> .</h3>
                 <h2>My Courses</h2>
-                <div class = "wrapper" style= padding:0>
-                    <?php 
-                    // 
-                    $sql = "SELECT CourseName FROM course";
-                    $result = mysqli_query($con, $sql);
-                    while($row = $result->fetch_assoc()){
-                        echo '<div class = "box" onclick="" style = "border-style: groove;">'.
-                                                '<h3>'.$row["CourseName"].'</h3>'.
-                                                '</div>';
-                    };
-				
-			 ?> 
-                </div>
+                
             </div>
+            <div class = "wrapper" style= padding:0 >
+                        <?php 
+                        // 
+                        $sql = "SELECT CourseID,CourseName FROM course";
+                        $result = mysqli_query($con, $sql);
+                        while($row = $result->fetch_assoc()){
+                            echo '<div class = "box" onclick = "myFunction(' .$row["CourseID"]. ')" style = "border-style: groove; " id = '.$row["CourseID"]. '>'.
+                                                    '<h3>'.$row["CourseName"].'</h3>'.
+                                                    '</div>';
+                        };
+                    
+                        ?> 
+
+            </div>
+            <div class = "content">
+                <h2>Course Content</h2>
+            </div>
+
+            <div class = "content" id = "courseContent">
+                
+            </div>
+
+
     </body>
 </html>
