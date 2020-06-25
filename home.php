@@ -30,22 +30,37 @@ include("data/AnswerDataInput.php");
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
         <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
         <script>
-            function myFunction(id){
+            function getCourse(id){
 
                  $.ajax({
                      url: 'data/CourseDataParse.php',
                      type: "POST",
                      data: {id:id},
                     success: function(data){
-                        alert("success");
                         $('#courseContent').html(data);
                     },
                     error: function(jqXHR, textStatus, errorThrown){
+                        alert('Error Loading');
+                    }
+                });
 
+            }
+            function getUnit(id){
+
+                $.ajax({
+                     url: 'data/UnitDataParse.php',
+                     type: "POST",
+                     data: {id:id},
+                    success: function(data){
+                        $('#unitContent').html(data);
+                    },
+                    error: function(jqXHR, textStatus, errorThrown){
                         alert('Error Loading');
                     }
                 });
             }
+
+        
              
         </script>
     </head>
@@ -74,7 +89,7 @@ include("data/AnswerDataInput.php");
                         $sql = "SELECT CourseID,CourseName FROM course";
                         $result = mysqli_query($con, $sql);
                         while($row = $result->fetch_assoc()){
-                            echo '<div class = "box" onclick = "myFunction(' .$row["CourseID"]. ')" style = "border-style: groove; " id = '.$row["CourseID"]. '>'.
+                            echo '<div class = "box" onclick = "getCourse(' .$row["CourseID"]. '); getUnit(' .$row["CourseID"]. ') " style = "border-style: groove; " id = '.$row["CourseID"]. '>'.
                                                     '<h3>'.$row["CourseName"].'</h3>'.
                                                     '</div>';
                         };
@@ -82,11 +97,12 @@ include("data/AnswerDataInput.php");
                         ?> 
 
             </div>
-            <div class = "content">
-                <h2>Course Content</h2>
-            </div>
+
 
             <div class = "content" id = "courseContent">
+                
+            </div>
+            <div class = "content" id = "unitContent">
                 
             </div>
 
