@@ -59,9 +59,23 @@ include("data/AnswerDataInput.php");
                     }
                 });
             }
+            function getLesson(id){
 
-        
-             
+                $.ajax({
+                    url: 'data/LessonDataParse.php',
+                    type: "POST",
+                    data: {id:id},
+                    success: function(data){
+                        $('#lessonContent').html(data);
+                    },
+                    error: function(jqXHR, textStatus, errorThrown){
+                        alert('Error Loading');
+                    }
+                });
+                
+            }
+           
+
         </script>
           
 
@@ -83,7 +97,8 @@ include("data/AnswerDataInput.php");
         </nav>
 
             <div class = "content">
-                <h3>Welcome, <?php echo $_SESSION['name']; ?> .</h3>
+                <h1>Welcome, <?php echo $_SESSION['name']; ?>, below are the courses you are currently enrolled in.</h1>
+                <h1> Select a course to begin learning!</h1>
                 <h2>My Courses</h2>
                 
             </div>
@@ -93,8 +108,9 @@ include("data/AnswerDataInput.php");
                         $sql = "SELECT CourseID,CourseName FROM course";
                         $result = mysqli_query($con, $sql);
                         while($row = $result->fetch_assoc()){
-                            echo '<div class = "box" onclick = "getCourse(' .$row["CourseID"]. '); getUnit(' .$row["CourseID"]. ') " style = "border-style: groove; " id = '.$row["CourseID"]. '>'.
-                                                    '<h3>'.$row["CourseName"].'</h3>'.
+                            echo '<div class = "card" onclick = "getCourse(' .$row["CourseID"]. '); getUnit(' .$row["CourseID"]. ') "  id = '.$row["CourseID"]. '>'.
+                                                    '<p class = "cardText">'.$row["CourseName"].'</p>'.
+
                                                     '</div>';
                         };
                     
@@ -107,9 +123,12 @@ include("data/AnswerDataInput.php");
                 
             </div>
             <div class = "unitContent" id = "unitContent">
+             
+            </div>
+            <div class = "lessonContent" id = "lessonContent">
                 
             </div>
-
+           
            
           
 
