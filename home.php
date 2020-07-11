@@ -22,10 +22,12 @@ include("data/AnswerDataInput.php");
 
 ?>
 
+
 <html>
     <head>
         <meta charset="utf-8">
         <title>LERN</title>
+        
         <link rel="stylesheet" href="../styles/style.css" type="text/css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
         <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
@@ -66,7 +68,7 @@ include("data/AnswerDataInput.php");
                     type: "POST",
                     data: {id:id},
                     success: function(data){
-                        $('#lessonContent').html(data);
+                        $('#lesson').html(data);
                     },
                     error: function(jqXHR, textStatus, errorThrown){
                         alert('Error Loading');
@@ -122,17 +124,43 @@ include("data/AnswerDataInput.php");
             <div class = "content" id = "courseContent">
                 
             </div>
-            <div class = "unitContent" id = "unitContent">
-             
-            </div>
+
+
+  
+
             <div class = "lessonContent" id = "lessonContent">
                 
-            </div>
+                <div class = "sidenav" id = "unitContent">
+                
+                </div>
+                <div class = "content" id="lesson">
+                <div>
+            </div> 
+
            
            
           
 
 
     </body>
+
+    
     
 </html>
+
+<script>
+        var dropdown = document.onload.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+                } else {
+                dropdownContent.style.display = "block";
+            }
+            });
+        }
+</script>

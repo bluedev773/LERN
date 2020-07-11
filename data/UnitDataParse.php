@@ -9,8 +9,13 @@ $id = $_POST['id'];
   while($row = $result->fetch_assoc()) {
     // echo "<h3>".$row["UnitID"]. ": " .$row["UnitName"]. "</h3>";
     // echo "<h3> Unit Description:".$row["UnitDescription"]."</h3>";
-    echo '<button class="accordion lessonAccordion" onclick = getLesson('.$row["UnitID"].') id = "accordion"> Unit: '.$row["UnitID"]. '   ' .$row["UnitName"]. '</button>';
-    echo '<div class="panel"> <p>' .$row["UnitDescription"]. '</p>  </div>';
+    echo '<button class= "dropdown-btn" onclick = getLesson('.$row["UnitID"].') id = > Unit: '.$row["UnitID"]. '   ' .$row["UnitName"]. '</button>';
+    echo '<div class="dropdown-container"> <a href="#">Link 1</a> <a href="#">Link 2</a> <a href="#">Link 3</a>  </div>';
+ 
+    
+    
+    
+
    }
   //  echo ' <script type="text/javascript">
   //           var acc = document.getElementsByClassName("accordion");
