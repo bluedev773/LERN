@@ -11,6 +11,15 @@
     </Lesson>
     <Lesson>
         <LessonID>2</LessonID>
+        <UnitID>1</UnitID>
+        <LessonName>Unir 1 Lesson 2</LessonName>
+        <Introduction>intro. </Introduction>
+        <Objective> obj. </Objective>
+        <KeyTerm>keyterm.</KeyTerm>
+        <Reading> reading.</Reading>
+    </Lesson>
+    <Lesson>
+        <LessonID>3</LessonID>
         <UnitID>2</UnitID>
         <LessonName>The basics of CSS</LessonName>
         <Introduction>This unit will be an  introduction to CSS. </Introduction>

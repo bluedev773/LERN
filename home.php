@@ -27,7 +27,6 @@ include("data/AnswerDataInput.php");
     <head>
         <meta charset="utf-8">
         <title>LERN</title>
-        
         <link rel="stylesheet" href="../styles/style.css" type="text/css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
         <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
@@ -149,18 +148,28 @@ include("data/AnswerDataInput.php");
 </html>
 
 <script>
-        var dropdown = document.onload.getElementsByClassName("dropdown-btn");
-        var i;
+ $(document).on('click', '.accordion', function() {
+  $(this).addClass('active').siblings().removeClass('active');
+  var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+     }
+});
 
-        for (i = 0; i < dropdown.length; i++) {
-            dropdown[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var dropdownContent = this.nextElementSibling;
-                if (dropdownContent.style.display === "block") {
-                dropdownContent.style.display = "none";
-                } else {
-                dropdownContent.style.display = "block";
-            }
-            });
-        }
+// var acc = document.getElementsByClassName("accordion");
+// var i;
+
+// for (i = 0; i < acc.length; i++) {
+//   acc[i].addEventListener("click", function() {
+//     this.classList.toggle("active");
+//     var panel = this.nextElementSibling;
+//     if (panel.style.display === "block") {
+//       panel.style.display = "none";
+//     } else {
+//       panel.style.display = "block";
+//     }
+//   });
+// }
 </script>
