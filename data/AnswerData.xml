@@ -27,7 +27,6 @@
         <AnswerText>Answer3 text4</AnswerText>
         <AnswerCorrect>Answer3 text1 </AnswerCorrect>
     </Answer>
-
     <Answer>
         <AnswerID>4</AnswerID>
         <QuestionID>4</QuestionID>
