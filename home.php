@@ -1,5 +1,4 @@
 
-
 <?php
 
 session_start();
@@ -22,7 +21,6 @@ include("data/AnswerDataInput.php");
 
 ?>
 
-
 <html>
     <head>
         <meta charset="utf-8">
@@ -31,8 +29,8 @@ include("data/AnswerDataInput.php");
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
         <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
         <script>
-            function getCourse(id){
 
+            function getCourse(id){
                  $.ajax({
                      url: 'data/CourseDataParse.php',
                      type: "POST",
@@ -44,10 +42,9 @@ include("data/AnswerDataInput.php");
                         alert('Error Loading');
                     }
                 });
-
             }
-            function getUnit(id){
 
+            function getUnit(id){
                 $.ajax({
                      url: 'data/UnitDataParse.php',
                      type: "POST",
@@ -60,8 +57,8 @@ include("data/AnswerDataInput.php");
                     }
                 });
             }
-            function getLesson(id){
 
+            function getLesson(id){
                 $.ajax({
                     url: 'data/LessonDataParse.php',
                     type: "POST",
@@ -86,17 +83,9 @@ include("data/AnswerDataInput.php");
                 if (y.style.display === "none") {
                     y.style.display = "block";
                 }
-
-            
             }
 
-          
-           
-
         </script>
-          
-
-       
 
     </head>
 
@@ -125,7 +114,7 @@ include("data/AnswerDataInput.php");
                         $sql = "SELECT CourseID,CourseName FROM course";
                         $result = mysqli_query($con, $sql);
                         while($row = $result->fetch_assoc()){
-                            echo '<div class = "card" onclick = "getCourse(' .$row["CourseID"]. '); getUnit(' .$row["CourseID"]. '); displayLesson(); "  id = '.$row["CourseID"]. '>'.
+                            echo '<div class = "card" onclick = "getCourse(' .$row["CourseID"]. '); getUnit(' .$row["CourseID"]. '); getLesson(' .$row["CourseID"]. '); displayLesson(); "  id = '.$row["CourseID"]. '>'.
                                                     '<p class = "cardText">'.$row["CourseName"].'</p>'.
 
                                                     '</div>';
@@ -135,13 +124,9 @@ include("data/AnswerDataInput.php");
 
             </div>
 
-
             <div class = "content" id = "courseContent">
                 
             </div>
-
-
-  
 
             <div class = "lessonContent" id = "lessonContent">
                 
@@ -152,14 +137,7 @@ include("data/AnswerDataInput.php");
                 <div>
             </div> 
 
-           
-           
-          
-
-
     </body>
-
-    
     
 </html>
 
@@ -174,18 +152,4 @@ include("data/AnswerDataInput.php");
      }
 });
 
-// var acc = document.getElementsByClassName("accordion");
-// var i;
-
-// for (i = 0; i < acc.length; i++) {
-//   acc[i].addEventListener("click", function() {
-//     this.classList.toggle("active");
-//     var panel = this.nextElementSibling;
-//     if (panel.style.display === "block") {
-//       panel.style.display = "none";
-//     } else {
-//       panel.style.display = "block";
-//     }
-//   });
-// }
 </script>
