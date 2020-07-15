@@ -103,8 +103,7 @@ include("data/AnswerDataInput.php");
         </nav>
 
             <div class = "content">
-                <h1>Welcome, <?php echo $_SESSION['name']; ?>, below are the courses you are currently enrolled in.</h1>
-                <h1> Select a course to begin learning!</h1>
+                <h1>Welcome, <?php echo $_SESSION['name']; ?>, select a course to begin learning!</h1>
                 <h2>My Courses</h2>
                 
             </div>
@@ -149,6 +148,7 @@ include("data/AnswerDataInput.php");
       panel.style.display = "none";
     } else {
       panel.style.display = "block";
+      panel.scrollIntoView();
      }
 });
 
