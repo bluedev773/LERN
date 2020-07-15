@@ -75,6 +75,22 @@ include("data/AnswerDataInput.php");
                 });
                 
             }
+
+            function displayLesson() {
+                var x = document.getElementById("lesson");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                }
+
+                var y = document.getElementById("unitContent");
+                if (y.style.display === "none") {
+                    y.style.display = "block";
+                }
+
+            
+            }
+
+          
            
 
         </script>
@@ -109,7 +125,7 @@ include("data/AnswerDataInput.php");
                         $sql = "SELECT CourseID,CourseName FROM course";
                         $result = mysqli_query($con, $sql);
                         while($row = $result->fetch_assoc()){
-                            echo '<div class = "card" onclick = "getCourse(' .$row["CourseID"]. '); getUnit(' .$row["CourseID"]. ') "  id = '.$row["CourseID"]. '>'.
+                            echo '<div class = "card" onclick = "getCourse(' .$row["CourseID"]. '); getUnit(' .$row["CourseID"]. '); displayLesson(); "  id = '.$row["CourseID"]. '>'.
                                                     '<p class = "cardText">'.$row["CourseName"].'</p>'.
 
                                                     '</div>';
@@ -129,10 +145,10 @@ include("data/AnswerDataInput.php");
 
             <div class = "lessonContent" id = "lessonContent">
                 
-                <div class = "sidenav" id = "unitContent">
+                <div class = "sidenav" id = "unitContent" style= "display:none;">
                 
                 </div>
-                <div class = "content" id="lesson">
+                <div class = "content" id="lesson" style= "display:none;">
                 <div>
             </div> 
 
