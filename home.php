@@ -73,6 +73,11 @@ include("data/AnswerDataInput.php");
                 
             }
 
+            function clearLesson() {
+                var x = document.getElementById("lesson");
+                $(x).empty();
+            }
+
             function displayLesson() {
                 var x = document.getElementById("lesson");
                 if (x.style.display === "none") {
@@ -85,6 +90,9 @@ include("data/AnswerDataInput.php");
                 }
             }
 
+
+
+            
         </script>
 
     </head>
@@ -113,7 +121,7 @@ include("data/AnswerDataInput.php");
                         $sql = "SELECT CourseID,CourseName FROM course";
                         $result = mysqli_query($con, $sql);
                         while($row = $result->fetch_assoc()){
-                            echo '<div class = "card" onclick = "getCourse(' .$row["CourseID"]. '); getUnit(' .$row["CourseID"]. '); getLesson(' .$row["CourseID"]. '); displayLesson(); "  id = '.$row["CourseID"]. '>'.
+                            echo '<div class = "card" onclick = "  getCourse(' .$row["CourseID"]. '); getUnit(' .$row["CourseID"]. ');  displayLesson(); clearLesson();  "  id = '.$row["CourseID"]. '>'.
                                                     '<p class = "cardText">'.$row["CourseName"].'</p>'.
 
                                                     '</div>';
@@ -142,14 +150,28 @@ include("data/AnswerDataInput.php");
 
 <script>
  $(document).on('click', '.accordion', function() {
-  $(this).addClass('active').siblings().removeClass('active');
-  var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-      panel.scrollIntoView();
-     }
-});
+
+    $(this).addClass('active').siblings().removeClass('active');
+    var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+        panel.style.display = "none";
+        $(this).removeClass('active');
+        } else {
+        panel.style.display = "block";
+        panel.scrollIntoView();
+        }
+    });
+
+    $(document).on('click', '.card', function() {
+
+        $(this).addClass('active').siblings().removeClass('active');
+
+    });
+    $(document).on('click', '.dropdown-btn', function() {
+        
+        $(this).addClass('active').siblings().removeClass('active');
+
+    });
 
 </script>
+
