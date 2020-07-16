@@ -8,7 +8,7 @@ $id = $_POST['id'];
    // output data of each row
   while($row = $result->fetch_assoc()) {
     echo "<h2>".$row["CourseName"]."</h2>";
-    echo "<h3> Course Description:".$row["CourseDescription"]."</h3>";
+    echo "<h3>".$row["CourseDescription"]."</h3>";
    }
  } else {
    echo "0 results";

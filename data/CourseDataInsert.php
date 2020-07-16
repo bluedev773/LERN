@@ -9,7 +9,7 @@
         $CourseName = $row->CourseName;
         $CourseDescription = $row->CourseDescription;
 
-        $sql = "INSERT INTO course(CourseID,CourseName,CourseDescription) VALUES ('" . $CourseID . "','" . $CourseName . "','" . $CourseDescription . "')";
+        $sql = "REPLACE INTO course(CourseID,CourseName,CourseDescription) VALUES ('" . $CourseID . "','" . $CourseName . "','" . $CourseDescription . "')";
         $result = mysqli_query($con, $sql);
         if (! empty($result)) {
             $affectedRow ++;

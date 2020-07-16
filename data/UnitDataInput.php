@@ -9,7 +9,7 @@
         $UnitName = $row->UnitName;
         $UnitDescription = $row->UnitDescription;
 
-        $sql = "INSERT INTO Unit(UnitID,CourseID,UnitName,UnitDescription) VALUES ('" . $UnitID . "','" . $CourseID . "','" . $UnitName . "','" . $UnitDescription . "')";
+        $sql = "REPLACE INTO Unit(UnitID,CourseID,UnitName,UnitDescription) VALUES ('" . $UnitID . "','" . $CourseID . "','" . $UnitName . "','" . $UnitDescription . "')";
         $result = mysqli_query($con, $sql);
         if (! empty($result)) {
             $affectedRow ++;

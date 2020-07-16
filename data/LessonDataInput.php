@@ -12,7 +12,7 @@
         $KeyTerm = $row->KeyTerm;
         $Reading = $row->Reading;
 
-        $sql = "INSERT INTO Lesson(LessonID,UnitID,LessonName,Introduction,Objective,KeyTerm,Reading) VALUES ('" . $LessonID . "','" . $UnitID . "','" . $LessonName . "','" . $Introduction . "','" . $Objective . "','" . $KeyTerm . "','" . $Reading . "')";
+        $sql = "REPLACE INTO Lesson(LessonID,UnitID,LessonName,Introduction,Objective,KeyTerm,Reading) VALUES ('" . $LessonID . "','" . $UnitID . "','" . $LessonName . "','" . $Introduction . "','" . $Objective . "','" . $KeyTerm . "','" . $Reading . "')";
         $result = mysqli_query($con, $sql);
         if (! empty($result)) {
             $affectedRow ++;

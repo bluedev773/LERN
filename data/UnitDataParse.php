@@ -7,37 +7,11 @@ $id = $_POST['id'];
  if ($result->num_rows > 0) {
    // output data of each row
   while($row = $result->fetch_assoc()) {
-    // echo "<h3>".$row["UnitID"]. ": " .$row["UnitName"]. "</h3>";
-    // echo "<h3> Unit Description:".$row["UnitDescription"]."</h3>";
+
     echo '<button class= "dropdown-btn" onclick = getLesson('.$row["UnitID"].') id = > Unit: '.$row["UnitID"]. '   ' .$row["UnitName"]. '</button>';
     echo '<div class="dropdown-container"> <a href="#">Link 1</a> <a href="#">Link 2</a> <a href="#">Link 3</a>  </div>';
  
-    
-    
-    
-
    }
-  //  echo ' <script type="text/javascript">
-  //           var acc = document.getElementsByClassName("accordion");
-  //           var i;
-
-  //           for (i = 0; i < acc.length; i++) {
-  //           acc[i].addEventListener("click", function() {
-
-
-  //               this.classList.toggle("active");
-  //               var panel = this.nextElementSibling;
-  //               if (panel.style.maxHeight) {
-  //               panel.style.maxHeight = null;
-  //               } else {
-  //               panel.style.maxHeight = panel.scrollHeight + "px";
-  //               } 
-
-
-  //           });
-  //         }
-
-  //        </script>';
  } else {
    echo "0 results";
  }
