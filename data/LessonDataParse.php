@@ -9,7 +9,7 @@ $id = $_POST['id'];
   while($row = $result->fetch_assoc()) {
 
     echo '<button class="accordion" id = "accordion"> <b>Lesson: '.$row["LessonID"].  '</b>   ' .$row["LessonName"]. '</button>';
-    echo '<div class="panel"> <p><b>Introduction: </b>' .$row["Introduction"]. '</p> <p><b>Objective:</b>' .$row["Objective"]. '</p> <p><b>Key-Terms: </b>' .$row["KeyTerm"]. '</p> <p><b>Reading:</b>' .$row["Reading"]. '</p> </div>';
+    echo '<div class="panel"> <p><b>Introduction: </b>' .$row["Introduction"]. '</p> <p><b>Objective:</b>' .$row["Objective"]. '</p> <p><b>Key-Terms: </b>' .$row["KeyTerm"]. '</p> <p><b>Reading: </b>' .$row["Reading"]. '</p> </div>';
    }
 
    
