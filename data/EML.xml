@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<course>
+    <coursename> course 1 </coursename>
+    <lesson>
+        <title>
+           lesson1
+        </title>
+        <introduction>
+            intro
+        </introduction>
+        <objective>
+            obj
+        </objective>
+        <keyterm>
+            term1,term2,term3
+        </keyterm>
+        <reading>
+            Read chapter 1
+        </reading>
+        <quiz>
+            <questionbank>
+                <question>
+                    <text>What is 1+2?</text>
+                    <answerchoices>
+                        <choice>
+                            3
+                        </choice>
+                        <choice>
+                            12
+                        </choice>
+                        <choice>
+                            2
+                        </choice>
+                    </answerchoices>
+                    <questionanswer>
+                        <choice>
+                            3
+                        </choice>
+                    </questionanswer>
+                </question>
+                <question>
+                    <text> What is XML?</text>
+                    <answerchoices>
+                        <choice>
+                            xylophone music lessons
+                        </choice>
+                        <choice>
+                            extensible markup language
+                        </choice>
+                        <choice>
+                            nothing
+                        </choice>
+                    </answerchoices>
+                    <questionanswer>
+                        <choice>
+                            extensible markup language
+                        </choice>
+                    </questionanswer>
+                </question>
+                </question>
+            </questionbank>
+            <grade>
+                13
+            </grade>
+        </quiz>
+    </lesson>
+    <lesson>
+        <title>
+            lesson2
+        </title>
+        <introduction>
+            intro 2
+        </introduction>
+        <objective>
+            obj 2
+        </objective>
+        <keyterm>
+            term4,term5,term6
+        </keyterm>
+        <reading>
+            >read chapter 2
+        </reading>
+        <quiz>
+            <questionbank>
+                <question>
+                    <text>
+                        What color is the ocean?
+                    </text>
+                    <answerchoices>
+                        <choice>
+                            pink
+                        </choice>
+                        <choice>
+                            blue
+                        </choice>
+                        <choice>
+                            orange
+                        </choice>
+                    </answerchoices>
+                    <questionanswer>
+                        <choice>
+                            blue
+                        </choice>
+                    </questionanswer>
+                </question>
+                <question>
+                    <text>
+                        What is my fav food?
+                    </text>
+                    <answerchoices>
+                        <choice>
+                            pizza
+                        </choice>
+                        <choice>
+                            cake
+                        </choice>
+                        <choice>
+                            marmite
+                        </choice>
+                    </answerchoices>
+                    <questionanswer>
+                        <choice>
+                            pizza
+                        </choice>
+                    </questionanswer>
+                </question>
+            </questionbank>
+            <grade>
+                89
+            </grade>
+        </quiz>
+    </lesson>
+    <assignment>
+        <description>
+            Assignment 1
+        </description>
+        <duedate>
+            2020-05-18
+        </duedate>
+        <grade>
+            75
+        </grade>
+    </assignment>
+    <assignment>
+        <description>
+            Assignment 2
+        </description>
+        <duedate>
+            2020-07-18
+        </duedate>
+        <grade>
+            89
+        </grade>
+    </assignment>
+</course>
