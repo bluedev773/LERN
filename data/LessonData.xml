@@ -12,11 +12,11 @@
     <Lesson>
         <LessonID>2</LessonID>
         <UnitID>1</UnitID>
-        <LessonName>Unit 1 Lesson 2</LessonName>
-        <Introduction>intro. </Introduction>
-        <Objective> obj. </Objective>
-        <KeyTerm>keyterm.</KeyTerm>
-        <Reading> reading.</Reading>
+        <LessonName>Advanced HTML</LessonName>
+        <Introduction>A deeper dive into HTML. </Introduction>
+        <Objective> Learn about form input types and page structure elements. </Objective>
+        <KeyTerm>color, date, datetime, email, month, number, range, search, tel, time, url, autocomplete, datalist. </KeyTerm>
+        <Reading> Read Chapter 3, Introduction to HTML5: Part 2, of the e-text. Do chapter 3 exercises.</Reading>
     </Lesson>
     <Lesson>
         <LessonID>3</LessonID>
