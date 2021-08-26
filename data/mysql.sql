@@ -73,4 +73,4 @@ CREATE TABLE IF NOT EXISTS Answer (
     AnswerCorrect VARCHAR(50) NOT NULL,
     PRIMARY KEY (AnswerID),
     FOREIGN KEY (QuestionID) REFERENCES Question(QuestionID)
-)
+);
