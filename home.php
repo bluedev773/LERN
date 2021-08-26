@@ -25,7 +25,7 @@ include("data/AnswerDataInput.php");
     <head>
         <meta charset="utf-8">
         <title>LERN</title>
-        <link rel="stylesheet" href="../styles/style.css" type="text/css">
+        <link rel="stylesheet" href="./styles/style.css" type="text/css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
         <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
         <script>
