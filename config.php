@@ -2,7 +2,7 @@
     // connect to database
     $servername='localhost';
     $username='root';
-    $password='';
+    $password='GwKz3CiBKVmX';
     $dbname="tma2_part2";
     $con=mysqli_connect($servername,$username,$password,$dbname);
     if(mysqli_connect_errno()){
