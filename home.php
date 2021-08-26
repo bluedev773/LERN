@@ -121,6 +121,7 @@ include("data/AnswerDataInput.php");
                         $sql = "SELECT CourseID,CourseName FROM course";
                         $result = mysqli_query($con, $sql);
                         while($row = $result->fetch_assoc()){
+				echo "number of rows: " . $result->num_rows;
                             echo '<div class = "card" onclick = "  getCourse(' .$row["CourseID"]. '); getUnit(' .$row["CourseID"]. ');  displayLesson(); clearLesson();  "  id = '.$row["CourseID"]. '>'.
                                                     '<p class = "cardText">'.$row["CourseName"].'</p>'.
 
